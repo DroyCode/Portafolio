@@ -1,0 +1,173 @@
+.title__div {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--color-primario);
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.title__container {
+    color: var(--color-sec);
+}
+
+
+
+.title__bio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.title__subsection {
+
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+.title__network {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.title__network__item:hover {
+    color: var(--color-ter);
+}
+
+.title__profile {
+    width: 18rem;
+    margin-bottom: 5rem;
+}
+
+/**/
+.card {
+    display: flex;
+    height: 70px;
+    width: 350px;
+}
+
+.card svg {
+    position: absolute;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.card .social-link1,
+.card .social-link2,
+.card .social-link3,
+.card .social-link4,
+.card .social-link5 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+    border-radius: 50px;
+}
+
+.card svg {
+    transform: scale(1);
+}
+
+.card .social-link1:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    animation: bounce_613 0.4s linear;
+}
+
+.card .social-link2:hover {
+    background-color: #242c34;
+    animation: bounce_613 0.4s linear;
+}
+
+.card .social-link3:hover {
+    background-color: #5865f2;
+    animation: bounce_613 0.4s linear;
+}
+
+.card .social-link4:hover {
+    background-color: #0a66c2;
+    animation: bounce_613 0.4s linear;
+}
+
+.card .social-link5:hover {
+    background-color: #ff8000;
+    animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+    40% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/**/
+
+@media (max-width: 768px) {
+    .title__profile {
+        width: 12rem;
+    }
+
+    .title__bio {
+        font-size: 1.8rem;
+    }
+
+    .title__subsection {
+        font-size: 1rem;
+        width: 328px;
+        height: 48;
+    }
+
+    .title__network__item {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .title__profile {
+        width: 8rem;
+        margin-bottom: 1rem;
+        margin-left: 5rem;
+    }
+
+    .title__bio {
+        font-size: 1.2rem;
+
+    }
+
+    .title__div {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+}
